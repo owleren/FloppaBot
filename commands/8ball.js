@@ -5,7 +5,8 @@ module.exports = {
         if (!args.length) {
             message.channel.send("Пожалуйста, введите вопрос");
         } else {
-            if (args[0].toLowerCase() === "как") {
+            const argsLow = args.map(question => question.toLowerCase());
+            if (argsLow.includes("как") || argsLow.includes("каков") || argsLow.includes("какова")) {
                 let answers = [
                     "Отлично!",
                     "Ужасно!",
@@ -14,7 +15,7 @@ module.exports = {
                 ];
                 const randomAnswer = Math.floor(Math.random() * answers.length);
                 message.channel.send(answers[randomAnswer]);
-            } else if (args[0].toLowerCase() === "какой") {
+            } else if (argsLow.includes("какой")) {
                 let answers = [
                     "Обычный",
                     "Отличный",
@@ -23,7 +24,7 @@ module.exports = {
                 ];
                 const randomAnswer = Math.floor(Math.random() * answers.length);
                 message.channel.send(answers[randomAnswer]);
-            } else if (args[0].toLowerCase() === "кто") {
+            } else if (argsLow.includes("кто")) {
                 let answers = [
                     "Ты!",
                     "Человек ниже!",
@@ -33,7 +34,7 @@ module.exports = {
                 ];
                 const randomAnswer = Math.floor(Math.random() * answers.length);
                 message.channel.send(answers[randomAnswer]);
-            } else if (args[0].toLowerCase() === "чей") {
+            } else if (argsLow.includes("чей")) {
                 const answers = [
                     "Твой!",
                     "Человека ниже!",
@@ -43,17 +44,26 @@ module.exports = {
                 ];
                 const randomAnswer = Math.floor(Math.random() * answers.length);
                 message.channel.send(answers[randomAnswer]);
-            }
-            else if (args[0].toLowerCase().startsWith("каков")) {
+            } else if(argsLow.includes("кому")) {
                 let answers = [
-                    "Отлично!",
-                    "Ужасно!",
-                    "Мерзко!",
-                    "Замечательно!",
+                    "Тебе!",
+                    "Человеку ниже!",
+                    "Ну уж точно не мне!",
+                    "Конечно же мне!",
+                    "Догадайся",
                 ];
                 const randomAnswer = Math.floor(Math.random() * answers.length);
                 message.channel.send(answers[randomAnswer]);
-            } else {
+            } else if(argsLow.includes("почему")) {
+                let answers = [
+                "А потому!",
+                "Потому что путин",
+                "И правда, почему? :thinking:",
+                ];
+                const randomAnswer = Math.floor(Math.random() * answers.length);
+                message.channel.send(answers[randomAnswer])
+            }
+            else {
                     let answers = [
                         "Голоса подсказывают мне, что ответ ****да****",
                         "Что-то мне подсказывает, что ответ ****нет****",
