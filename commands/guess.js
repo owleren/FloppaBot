@@ -2,7 +2,6 @@ module.exports = {
   name: "guess",
   description: "guessing between numbers game command",
   execute(message, args) {
-  	
      let randomInteger = ((min, max) => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     });
@@ -12,7 +11,7 @@ module.exports = {
        let myInt = tn;
        if (randInt == myInt) {
          return "Вы угадали!";
-       } else return "Вы не угадали! " +  "Ответ: " + ` + randInt + `;
+       } else return "Вы не угадали! " +  "Ответ: " + ` ||${randInt}|| `;
     });
     
       if (args[2]) {

@@ -61,7 +61,7 @@ module.exports = {
                 "И правда, почему? :thinking:",
                 ];
                 const randomAnswer = Math.floor(Math.random() * answers.length);
-                message.channel.send(answers[randomAnswer])
+                message.channel.send(answers[randomAnswer]);
             }
             else {
                     let answers = [

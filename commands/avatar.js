@@ -6,9 +6,9 @@ module.exports = {
     execute(message) {
         const user = message.mentions.users.first() || message.author
         const embed = new MessageEmbed()
-            .setTitle(user.username)
+            .setTitle(user.tag)
             .setColor('#c58c85')
-            .setImage(user.displayAvatarURL({ dynamic: true }))
+            .setImage(user.displayAvatarURL({ dynamic: true, size: 1024 }))
         message.channel.send(embed)
     }
 };

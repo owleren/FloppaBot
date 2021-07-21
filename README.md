@@ -1,2 +1,1 @@
-# Start
-npm start
+# Discord bot

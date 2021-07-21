@@ -1,4 +1,4 @@
-const { MessageAttachment } = require("discord.js");
+const { MessageAttachment, MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: "floppa",
@@ -21,5 +21,5 @@ module.exports = {
         ];
         const randomAtt = Math.floor(Math.random() * attachments.length);
         message.channel.send(attachments[randomAtt]);
-    },
+   },
 };
