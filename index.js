@@ -1,5 +1,3 @@
-
-const mySecret = process.env['token']
 const fs = require("fs");
 const { prefix } = require("./config.json");
 const token = process.env['token'];
